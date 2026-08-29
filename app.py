@@ -45,7 +45,7 @@ with st.sidebar:
     st.divider()
     
     st.subheader("🧹 Session Control")
-    if st.button("🔄 Reset All Roll Numbers"):
+    if st.button("🔄 Reset All Roll Numbers exect alredy performed"):
         st.session_state.used_rolls = []
         st.session_state.current_student = None
         st.session_state.final_duration = "0m 0s"
@@ -131,7 +131,7 @@ def save_to_excel(data):
         new_df.to_excel(EXCEL_FILE, index=False)
         return True
     except PermissionError:
-        st.error("⚠️ CLOSE EXCEL: Please close the file so I can save!")
+        st.error("⚠️ CLOSE EXCEL: Please close the file so I can save before you close!")
         return False
 
 # --- MAIN AREA ---
