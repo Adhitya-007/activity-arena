@@ -65,7 +65,7 @@ with st.sidebar:
         if TOTAL_STUDENTS > 0:
             st.progress(p_count / TOTAL_STUDENTS)
     except:
-        st.info("No records yet.")
+        st.info("No records yet")
 
 # --- THE "FORCE TEXT VISIBILITY" CSS ---
 # This section targets the exact HTML structure of Streamlit buttons
